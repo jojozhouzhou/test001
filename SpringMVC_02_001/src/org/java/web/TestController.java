@@ -28,6 +28,12 @@ public class TestController  {
 		System.out.println("进入第四个方法");
 		return "/show";
 	}
+	
+	@RequestMapping(params="method=four")
+	public String five(){
+		System.out.println("进入第五个方法");
+		return "/show";
+	}
 	//@RequestMapping(value="five",method=RequestMethod.POST)
 	//@RequestMapping(value="five",method=RequestMethod.GET)
 	@RequestMapping(value="five",method={RequestMethod.POST,RequestMethod.GET})
